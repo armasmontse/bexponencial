@@ -1,0 +1,206 @@
+.missions {
+    &-modal__content{
+       padding: 40px;
+    }
+    &__finished {
+        background-color: rgba(255,195,29,0.6);
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+
+        &-container {
+            position: relative;
+            border-radius: 10px;
+            margin: 20px auto 0;
+            min-height: 400px;
+            width: 80%;
+            display: table;
+            background-color: white;
+        }
+    }
+    &__prices{
+        display: table;
+        margin:auto;
+        p{
+            display: inline-block;
+            @extend %IBMPlexSans;
+            font-weight: bold;
+            color: c(green);
+            font-size: 30px;
+            vertical-align: middle;
+        }
+        img{
+            vertical-align: middle;
+            padding-left: 6px;
+            width: 50px;
+            height:50px;
+            display: inline-block;
+        }
+
+    }
+    &__congrats {
+        @extend %IBMPlexSans;
+        color: c(green);
+        text-align: center;
+        font-size: 20px;
+    }
+    &__extras{
+        display: table;
+        margin:auto;
+        p{
+            display: inline-block;
+            @extend %IBMPlexSans;
+            font-weight: bold;
+            color: c(orange);
+            font-size: 30px;
+            vertical-align: middle;
+        }
+        img{
+            vertical-align: middle;
+            padding-left: 6px;
+            width: 50px;
+            height:50px;
+            display: inline-block;
+        }
+    }
+    &__extra {
+        @extend %IBMPlexSans;
+        color: c(orange);
+        text-align: center;
+        font-size: 14px;
+    }
+}
+.strike{
+  padding-left: 10px;
+}
+.star {
+    &-rating{
+        padding: 20px;
+
+    }
+
+    &__score, &__strike{
+        display: block;
+        text-transform: uppercase;
+        p{
+
+            line-height: 39px;
+            display: inline-block;
+            font-family: "IBMPlexSans", serif;
+            color: c(orange);
+            font-size: 15px;
+            padding-right: 5px;
+            @include under(sm) {
+                font-size: 12px;
+                line-height: 31px;
+            }
+        }
+    }
+    &__rating {
+        background-color: rgba(255,195,29,0.6);
+        position: fixed;
+        z-index: 99999;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100vh;
+
+        &-container {
+            position: relative;
+            border-radius: 10px;
+            margin: 20px auto 0;
+            min-height: 400px;
+            width: 80%;
+            display: table;
+            background-color: white;
+        }
+    }
+
+    &__btn {
+        font-family: "IBMPlexSans-SemiBold", serif;
+        font-size: 15px;
+        text-align: center;
+        cursor: pointer;
+        width: 100%;
+        max-width: 215px;
+        min-height: 50px;
+        display: table;
+        background-color: #259C7A;
+        border: 0;
+        color: #ffffff;
+        margin: auto;
+    }
+}
+
+.close-modal {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+
+    img {
+        width: 30px;
+        height: 30px;
+    }
+}
+//questions-text
+.rating {
+    &__questions-text {
+        font-family: "IBMPlexSans", serif;
+        font-size: 16px;
+        line-height: 25px;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 195, 29, 0.06)), to(rgba(255, 195, 29, 0.2)));
+        background-image: linear-gradient(rgba(255, 195, 29, 0.06), rgba(255, 195, 29, 0.2));
+        padding: 25px 80px 25px 25px;
+    }
+
+    &__answer {
+        font-family: "IBMPlexSans", serif;
+        font-size: 16px;
+        line-height: 25px;
+        padding: 25px 80px 25px 25px;
+        background: c(yellow);
+        color: white;
+    }
+
+    &__instructions {
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        font-family: "IBMPlexSans", serif;
+        font-size: 15px;
+        line-height: 20px;
+        letter-spacing: 0.1px;
+        color: #259C7A;
+    }
+
+    &__score {}
+}
+
+.bounce-enter-active {
+    animation: bounce-in 0.5s;
+}
+
+.bounce-leave-active {
+    animation: bounce-in 0.5s reverse;
+}
+@keyframes bounce-in {
+    0% {
+        transform: scale(0);
+    }
+
+    50% {
+        transform: scale(1.5);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}

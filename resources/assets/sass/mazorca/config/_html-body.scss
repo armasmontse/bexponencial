@@ -1,0 +1,18 @@
+// body, html { @include clearfix;}
+
+html, body {
+	height: 100%;
+}
+
+body {
+	display: flex;
+	flex-direction: column;
+}
+
+.main__content {
+	flex: 1 0 auto;
+}
+
+[v-cloak] {
+	display: none
+}

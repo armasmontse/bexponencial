@@ -1,0 +1,181 @@
+.drive {
+    &-single {
+        .bg-gradient-yellow {
+            .drive__title {
+                @extend %IBMPlexMono;
+                font-size: 18px;
+                line-height: 21px;
+                letter-spacing: 0.5px;
+                text-transform: uppercase;
+                color: c(purple);
+
+                // padding-bottom: 40px;
+                margin-bottom: 45px;
+                @include under(sm) {
+                    padding-bottom: 30px;
+                    margin-bottom: 0;
+                }
+
+                &-breadcrumbs {
+                    display: flex;
+                    flex-direction: row;
+                    li {
+                        &:after {
+                            content: '>';
+                            padding-right: 10px;
+                            padding-left: 10px;
+
+                        }
+                        &:last-of-type {
+                            &:after {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .drive__sbtitle {
+                @extend %title-drive-single;
+                color: c(orange);
+                margin-bottom: 20px;
+            }
+
+            .drive-single__text {
+                @extend %paragraph-drive-single;
+                p, ul li {
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+
+        .bg-white {
+            min-height: auto;
+            padding: 0;
+            .drive__title {
+
+            }
+
+            .drive__sbtitle {
+
+            }
+
+            .drive-single__text {
+                @extend %paragraph-drive-single;
+                p,
+                ul li {
+                    padding-bottom: 12px;
+                }
+            }
+        }
+
+
+        .bg-yellow {
+            min-height: auto;
+            .drive__title {
+
+            }
+
+            .drive-single__sbtitle {
+                @extend %title-drive-single;
+                color: c(green);
+                margin-bottom: 20px;
+                @include under(sm) {
+                    font-size: 12px;
+                }
+            }
+
+            .drive-single__text {
+                @extend %paragraph-drive-single-yellow;
+                padding-bottom: 30px;
+                p,
+                ul li {
+                    padding-left: 20px;
+                    padding-bottom: 12px;
+                }
+                ul li {
+                    &:before {
+                        content: '-';
+                        padding-right: 5px;
+                    }
+                }
+
+                a {
+                    text-decoration: underline;
+                    @include under(sm) {
+                        display: block;
+                        margin-bottom: 30px;
+                    }
+                }
+            }
+            .drive-single__content-btn {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: flex-end;
+                @include under(sm) {
+                    flex-direction: column;
+                }
+                button {
+                    margin-left: 15px;
+                }
+                
+            }
+            .drive-single__btn {
+                background-color: transparent;
+                border: 1px solid #fff;
+                width: 100%;
+                max-width: 215px;
+                min-height: 50px;
+                color: #fff;
+                cursor: pointer;
+                @extend %IBMPlexSans-SemiBold;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: .5px;
+                @include under(sm) {
+                    margin: 0px 0 20px 0;
+                }
+                &:nth-of-type(2) {
+                    margin-right: 20px;
+                    @include under(sm) {
+                        margin-left: 0px;
+                        display: block;
+                    }
+                }
+                &:hover {
+                    background-color: c(white);
+                    color: c(green);
+                }
+            }
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-bottom: 50px
+            }
+
+            .drive-single__cont-video {
+                position: relative;
+                padding-bottom: 56.25%;
+                padding-top: 30px;
+                height: 0;
+                overflow: hidden;
+
+                margin-bottom: 50px;
+                iframe {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+        .drive__content {
+            @include under(sm) {
+                padding: 20px 20px 10px 20px;
+            }
+        }
+    }
+}

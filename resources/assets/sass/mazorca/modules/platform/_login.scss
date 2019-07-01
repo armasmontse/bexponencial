@@ -1,0 +1,225 @@
+.login {
+    .navbar {
+        height: 65px;
+
+        &__container {
+            width: 90%;
+            height: 100%;
+            margin: 0 auto;
+        }
+
+        &__logo {
+            max-width: 250px;
+            padding-top: 15px;
+        }
+    }
+
+    .contenido {
+        background-color: c(yellow);
+        min-height: 90vh;
+
+        &__contenedor {
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        &__frase {
+            @extend %IBMPlexSans-SemiBold;
+            font-size: 14px;
+            color: c(white);
+            text-transform: uppercase;
+            line-height: 25px;
+            letter-spacing: 3px;
+            padding-top: 20px;
+        }
+
+        .card {
+            width: 80%;
+            max-width: 400px;
+            margin: 50px auto;
+
+            &__titulo {
+                @extend %IBMPlexMono;
+                font-size: 18px;
+                color: c(white);
+                text-transform: uppercase;
+                margin-bottom: 30px;
+            }
+
+            &__subtitulo {
+                @extend %IBMPlexSans;
+                font-size: 13px;
+                color: c(green);
+                text-transform: uppercase;
+            }
+
+            .flex {
+                display: flex;
+                justify-content: space-between;
+                border-bottom: 2px solid c(green);
+                margin: 40px 0 50px;
+                padding-bottom: 30px;
+
+                /* Shared */
+                .btn {
+                    box-sizing: border-box;
+                    position: relative;
+                    /* width: 13em;  - apply for fixed size */
+                    margin: 0.2em;
+                    padding: 0 15px 0 46px;
+                    border: none;
+                    text-align: left;
+                    line-height: 34px;
+                    white-space: nowrap;
+                    border-radius: 0.2em;
+                    font-size: 12px;
+                    @extend %IBMPlexSans;
+                    color: c(white);
+                }
+                .btn:before {
+                    content: "";
+                    box-sizing: border-box;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 34px;
+                    height: 100%;
+                }
+                .btn:focus {
+                    outline: none;
+                }
+                .btn:active {
+                    box-shadow: inset 0 0 0 32px rgba(0,0,0,0.1);
+                }
+
+                /* Facebook */
+                .btn__facebook {
+                    background-color: #4469B0;
+                    background-image: linear-gradient(#4C69BA, #3B55A0);
+                    /*font-family: "Helvetica neue", Helvetica Neue, Helvetica, Arial, sans-serif;*/
+                    text-shadow: 0 -1px 0 #354C8C;
+                }
+                .btn__facebook:before {
+                    border-right: #364e92 1px solid;
+                    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_facebook.png') 6px 6px no-repeat;
+                }
+                .btn__facebook:hover,
+                .btn__facebook:focus {
+                    background-color: #5B7BD5;
+                    background-image: linear-gradient(#5B7BD5, #4864B1);
+                }
+
+                /* Google */
+                .btn__google {
+                    background: #4285F4;
+                }
+                .btn__google:before {
+                    border-right: #3476D6 1px solid;
+                    background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/14082/icon_google.png') 6px 6px no-repeat;
+                }
+                .btn__google:hover,
+                .btn__google:focus {
+                    background: #3678D8;
+                }
+            }
+
+            form {
+                .titulo {
+                    @extend %IBMPlexSans;
+                    font-size: 13px;
+                    color: c(green);
+                    text-transform: uppercase;
+                    margin-bottom: 20px;
+                }
+
+                .form__group {
+                    label {
+                        @extend %IBMPlexSans;
+                        font-size: 13px;
+                        color: c(green);
+                        text-transform: uppercase;
+                        margin-bottom: 5px;
+
+                        &.terminos {
+                            @extend %IBMPlexSans;
+                            font-size: 12px;
+                            color: c(green);
+                            text-transform: inherit;
+                        }
+                    }
+
+                    input {
+                        height: 35px;
+                        border: none;
+                        margin-top: 5px;
+                        background-color: $input-bg;
+                        @extend %IBMPlexSans;
+                        font-size: 16px;
+                        color: #BBBDBF;
+
+                        &.checkbox {
+                            width: 10px;
+                            height: 10px;
+                            display: flex;
+                        }
+
+                        &::-webkit-input-placeholder {
+                            /* Chrome/Opera/Safari */
+                            color: #BBBDBF;
+                            font-size: 16px;
+                            text-transform: lowercase;
+                            @extend %IBMPlexSans;
+                        }
+
+
+                    }
+
+                    button {
+                        width: 215px;
+                        height: 50px;
+                        background-color: c(green);
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        border: none;
+                        margin: 30px auto 0;
+                        @extend %IBMPlexSans-SemiBold;
+                        font-size: 15px;
+                        color: c(white);
+                        letter-spacing: 2px;
+                    }
+
+                    .form-check {
+                        display: flex;
+                    }
+                }
+
+                .link {
+                    @extend %IBMPlexSans;
+                    font-size: 12px;
+                    color: c(green);
+
+                    &__forgot {}
+
+                    &__registro {
+                        display: flex;
+                        justify-content: center;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+
+    .full {
+        background-color: $input-bg;
+        grid-template-columns: 100px 40% auto;
+    }
+
+    router-link {
+        word-break: break-word;
+        padding: 15px 12px 0;
+        font-size: 12px;
+        line-height: 14px;
+    }
+}

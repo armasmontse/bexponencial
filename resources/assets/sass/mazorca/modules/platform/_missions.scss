@@ -1,0 +1,623 @@
+.missions {
+    &__container {
+        width: 80%;
+        // margin: 100px auto 0;
+        margin: 0 auto;
+        background-color: white;
+        max-width: 764px;
+        // border-top-left-radius: 20px;
+        // border-top-right-radius: 20px;
+        border-radius: 20px;
+        margin-top: 100px;
+        @include under(sm) {
+            width: 90%;
+            margin: 60px auto;
+        }
+    }
+
+    &__description {
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        background-image: linear-gradient(rgba(255, 195, 29, 0.06), rgba(255, 195, 29, 0.2));
+        padding: 25px 80px 25px 25px;
+        position: relative;
+        @include under(sm) {
+            padding: 20px;
+        }
+    }
+
+    &__buttonClose {
+        position: absolute;
+        top: -25px;
+        right: 80px;
+        img {
+            width: 50px;
+            height: auto;
+        }
+    }
+
+    &__aldea {
+        @extend %title-aldea;
+        padding-bottom: 20px;
+    }
+
+    &__archievents {
+        @extend %flex-items-center;
+        @extend %label-archievents;
+        padding-bottom: 10px;
+
+        a {
+            display: flex;
+            flex-direction: row-reverse;
+            align-items: center;
+            justify-content: flex-end;
+            min-width: 74px;
+            min-height: 35px;
+
+            &:last-of-type {
+                @include under(769px) {
+                    flex: 1;
+                }
+            }
+        }
+
+        span {}
+
+        img {
+            width: auto;
+            max-width: 26px;
+            margin: 0 0 0 10px;
+        }
+
+        &.desktop {
+            @include under(sm) {
+                display: none;
+            }
+        }
+
+        &.mobile {
+            justify-content: start;
+            @include over(769px) {
+                display: none;
+            }
+        }
+    }
+
+    &__name {
+        @extend %title-missions;
+        @extend %flex-items-center;
+
+        span {
+            img {
+                width: 22px;
+                margin-right: 6px;
+            }
+        }
+    }
+
+    &__sbtitle {
+        @extend %sbtitle-missions;
+        padding-bottom: 40px;
+        text-transform: uppercase;
+        @include under(sm) {
+            padding-bottom: 20px;
+        }
+    }
+
+    &__desc {
+        @extend %paragraph-missions-desc;
+    }
+    // R E T O S
+    &__retos {
+        padding: 25px 80px 25px 25px;
+        @include under(sm) {
+            padding: 20px;
+        }
+
+        &-title {
+            @extend %title-retos-text;
+            padding-bottom: 10px;
+        }
+    }
+
+    &__questions {
+        width: 100%;
+        background-color: #fff;
+        box-shadow: 20px 6px 35px #ffc31d;
+        padding: 0 0 75px;
+        margin-top: -20px;
+        margin-bottom: -50px;
+        @include under(sm) {
+            margin-top: -80px;
+        }
+
+        &-container {
+            max-width: 768px;
+            margin: 0 auto;
+            position: relative;
+
+            &:last-of-type {
+                background-color: #FFC31D;
+            }
+            @include under(sm) {
+                padding: 0 20px;
+            }
+
+            .missions__archievents {
+                width: 100%;
+                max-width: 332px;
+                margin-left: auto;
+                padding-top: 45px;
+            }
+        }
+
+        &-text {
+            @extend %paragraph-missions-question;
+            // padding-bottom: 70px;
+        }
+    }
+
+    &__indicator {
+        position: absolute;
+        top: -100px;
+        left: calc(100% / 6);
+
+        &-triangle {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            overflow: hidden;
+            display: block;
+
+            &:after {
+                content: "";
+                position: absolute;
+                width: 50px;
+                height: 50px;
+                background: #fff;
+                transform: rotate(45deg);
+                top: 75px;
+                left: 25px;
+                box-shadow: -1px -1px 10px -2px rgba(255, 195, 29, 0.9);
+            }
+        }
+    }
+
+    &__help {
+        margin-left: -102px;
+
+        &-JS {
+            cursor: pointer;
+        }
+
+        img {
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+        }
+
+        button {
+            @extend %IBMPlexSans-SemiBold;
+                font-size: 15px;
+                line-height: 18px;
+                letter-spacing: .5px;
+                text-align: center;
+                cursor: pointer;
+                width: 100%;
+                max-width: 215px;
+                min-height: 50px;
+                background-color: transparent;
+                border: 1px solid c(green);
+                color: c(green);
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: center;
+                margin: 0 auto;
+                margin-top: 20px;
+                margin-bottom: 20px;
+                &:after {
+                    content: url('/images/images-news/logros1.svg');
+                    width: 30px;
+                    height: 30px;
+                    margin-left: 5px;
+                    margin-top: 0;
+                }
+        }
+    }
+
+    &__content {
+        padding: 30px 0;
+        border-bottom: 1px solid c(gray-light);
+
+        &:first-of-type {
+            background-color: blue;
+        }
+        // background-color: red;
+        .missions__questions-text {
+            width: 100%;
+            max-width: 666px;
+            // background-color: red;
+        }
+
+        &:only-child {
+            background-color: blue;
+        }
+
+        &:nth-child(2) {
+            background-color: red;
+
+            .missions__questions-text {
+                width: 100%;
+                max-width: 666px;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: red;
+
+            .missions__questions-text {
+                width: 100%;
+                max-width: 666px;
+            }
+        }
+
+        &:last-of-type {
+            border: 0;
+        }
+
+        &:first-of-type {
+            background-color: blue;
+        }
+    }
+
+    &__addFile {
+        cursor: pointer;
+        border: 3px dashed #FFC31D;
+        width: 100%;
+        max-width: 375px;
+        margin: 0 auto;
+        min-height: 202px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        flex-direction: column;
+        transition: all 0.3s ease;
+        position: relative;
+
+        input[type="file"]#addFile {
+            width: 100%;
+            height: 100%;
+            opacity: 0;
+            overflow: hidden;
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            cursor: pointer;
+        }
+
+        label[for="addFile"] {
+            font-size: 14px;
+            font-weight: 600;
+            color: #fff;
+            display: inline-block;
+            transition: all 0.5s;
+            cursor: pointer;
+            padding: 0 !important;
+            text-transform: uppercase;
+            width: 100%;
+            text-align: center;
+
+            img {
+                width: 100%;
+                max-width: 90px;
+                margin: 0 auto;
+            }
+        }
+    }
+
+    &__instructions {
+        @extend %sbtitle-missions;
+        text-transform: uppercase;
+        padding-bottom: 20px;
+        display: flex;
+        padding-top: 70px;
+    }
+
+    &__btn-save {
+        @extend %label-archievents;
+        border: 0;
+        margin: 0 auto;
+        display: block;
+        cursor: pointer;
+        padding: 20px;
+        background-color: transparent;
+    }
+
+    &__btn-complete {
+        @extend %button-green;
+    }
+
+    &__error {
+        @extend %sbtitle-missions;
+        text-align: center;
+        color: red;
+    }
+
+    &__ruta-image {
+        @extend %sbtitle-missions;
+        text-align: center;
+        color: c(yellow);
+        padding-top: 20px;
+    }
+
+    &__answer {
+        &-textarea {
+            border: 0;
+            border-bottom: 3px dashed #d0d0d0;
+            color: #BCBEC0;
+            font-size: 16px;
+            line-height: 25px;
+            @extend %IBMPlexSans;
+
+            &.url {
+                border: 3px dashed #d0d0d0;
+            }
+        }
+    }
+
+    &__container-diagram {
+        position: relative;
+        margin-bottom: 120px;
+        @include under(sm) {
+            margin-bottom: 79px;
+        }
+    }
+
+    &__diagram {
+        position: absolute;
+        border-radius: 50% 50%;
+        text-align: center;
+        height: 44%;
+        width: 15%;
+        z-index: 1;
+        cursor: pointer;
+
+        &.completed,
+        &.disabled {
+            .missions__item {
+                //display: none;
+            }
+        }
+
+        &-reto1 {
+            // background: red;
+            top: 25%;
+            left: 1%;
+
+            &.completed ~ .retos-svg {
+                .reto1.cls-4 {
+                    fill: #259C7A;
+                }
+
+                .reto1.cls-5 {
+                    stroke: #fff;
+                }
+            }
+
+            &.disabled~.retos-svg {
+                .reto1.cls-4 {
+                    fill: #fff;
+                }
+
+                .reto1.cls-5 {
+                    stroke: #BCBEC0;
+                    fill: #fff;
+                }
+            }
+        }
+
+        &-reto2 {
+            top: 53%;
+            left: 22%;
+
+            &.completed ~ .retos-svg {
+                .reto2.cls-6 {
+                    fill: #259C7A;
+                }
+
+                .reto2.cls-7 {
+                    stroke: #fff;
+                    fill: #259C7A;
+                }
+            }
+
+            &.disabled~.retos-svg {
+                .reto2.cls-6 {
+                    fill: #fff;
+                }
+
+                .reto2.cls-7 {
+                    stroke: #BCBEC0;
+                    fill: #fff;
+                }
+            }
+        }
+
+        &-reto3 {
+            top: 31%;
+            left: 42%;
+
+            &.completed ~ .retos-svg {
+                .reto3.cls-6 {
+                    fill: #259C7A;
+                }
+
+                .reto3.cls-7 {
+                    stroke: #fff;
+                    fill: #259C7A;
+                }
+            }
+
+            &.disabled~.retos-svg {
+                .reto3.cls-6 {
+                    fill: #fff;
+                }
+
+                .reto3.cls-7 {
+                    stroke: #BCBEC0;
+                    fill: #fff;
+                }
+            }
+        }
+
+        &-reto4 {
+            top: 3%;
+            left: 63%;
+
+            &.completed~.retos-svg {
+                .reto4.cls-6 {
+                    fill: #259C7A;
+                }
+
+                .reto4.cls-7 {
+                    stroke: #fff;
+                    fill: #259C7A;
+                }
+            }
+
+            &.disabled~.retos-svg {
+                .reto4.cls-6 {
+                    fill: #fff;
+                }
+
+                .reto4.cls-7 {
+                    stroke: #BCBEC0;
+                    fill: #fff;
+                }
+            }
+        }
+
+        &-reto5 {
+            top: 36%;
+            left: 84%;
+
+            &.completed ~ .retos-svg {
+                .reto5.cls-6 {
+                    fill: #259C7A;
+                }
+
+                .reto5.cls-7 {
+                    stroke: #fff;
+                    fill: #259C7A;
+                }
+            }
+
+            &.disabled~.retos-svg {
+                .reto5.cls-6 {
+                    fill: #fff;
+                }
+
+                .reto5.cls-7 {
+                    stroke: #BCBEC0;
+                    fill: #fff;
+                }
+            }
+        }
+    }
+
+    &__item {
+        padding-top: 112%;
+
+        .title {
+            @extend %IBMPlexSans;
+            font-size: 17px;
+            line-height: 21px;
+            color: c(green);
+            @include under(sm) {
+                font-size: 12px;
+                line-height: 16px;
+            }
+
+            strong {
+                @extend %IBMPlexSans-SemiBold;
+            }
+        }
+    }
+
+    .modal__help {
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        background-color: rebeccapurple;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+    }
+}
+
+.retos-svg {
+    .cls-1 {
+        isolation: isolate;
+    }
+
+    .cls-2,
+    .cls-5 {
+        fill: none;
+    }
+
+    .cls-2 {
+        stroke: #e6e7e8;
+        stroke-miterlimit: 10;
+        stroke-width: 3px;
+        stroke-dasharray: 3 7;
+    }
+
+    .cls-2,
+    .cls-5,
+    .cls-7 {
+        stroke-linecap: round;
+    }
+
+    .cls-3 {
+        opacity: 0.75;
+        mix-blend-mode: multiply;
+    }
+
+    .cls-5,
+    .cls-7 {
+        stroke: #fff;
+    }
+
+    .cls-5,
+    .cls-7 {
+        stroke-linejoin: round;
+    }
+
+    .cls-4,
+    .cls-6,
+    .cls-7 {
+        fill: #FFC31D;
+    }
+}
+
+.next-mission {
+    @extend %IBMPlexSans;
+    background-color: c(green);
+    border: 1px solid white;
+    padding: 12px 19px;
+    color: white;
+    font-size: 16px;
+    display: table;
+    margin: auto;
+    transition: all ease 0.5s;
+
+    &:hover {
+        border: 1px solid c(green);
+        background-color: white;
+        color: c(green);
+    }
+}

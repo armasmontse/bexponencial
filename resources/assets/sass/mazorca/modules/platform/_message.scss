@@ -1,0 +1,69 @@
+.message {
+    &__action {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: #000;
+        min-height: 70px;
+        z-index: 12;
+
+        h2 {
+            @extend %IBMPlexMono;
+            font-size: 18px;
+            line-height: 70px;
+        }
+
+        h2.error {
+            text-align: center;
+            color: c(orange);
+        }
+
+        h2.success {
+            text-align: center;
+            color: c(yellow);
+        }
+    }
+}
+.message__body{
+    display: table;
+    //margin:  5px auto;
+    margin: 20px auto -5px auto;
+    .flash_icon {
+        display: table-cell;
+
+
+        .item {
+            display: flex;
+            margin-right: 10px;
+            p {
+                @extend %IBMPlexSans-SemiBold;
+                font-size: 18px;
+                color: c(green);
+                padding-right: 7px;
+                line-height: 30px;
+            }
+
+            img {
+
+                width: 30px;
+                height: 30px;
+            }
+        }
+    }
+}
+
+
+.fade-enter-active {
+    transition: all 0.3s ease;
+}
+
+.fade-leave-active {
+    transition: all 0.4s ease;
+}
+/* .slide-fade-leave-active below version 2.1.8 */
+.fade-enter,
+.fade-leave-to {
+    height: 0;
+    opacity: 0;
+}

@@ -1,0 +1,201 @@
+.drive {
+    $col-1: 100%/12;
+    $col-1-8: 100%/8;
+    // background-color: red;
+
+    &__row {
+        width: $col-1*12;
+        // margin: 50px auto;
+        margin: 0 auto;
+        // padding: 30px 0 50px;
+        // min-height: calc(100vh - 120px);
+        display: flex;
+        flex-direction: row;
+        // justify-content: center;
+        justify-content: space-between;
+
+        @include under(sm) {
+            width: 100%;
+            max-width: 800px;
+            // flex-direction: column-reverse;
+            // justify-content: center;
+            // margin: 10px auto 30px auto;
+        }
+
+    }
+
+    &__container {
+        width: $col-1*8;
+        max-width: 800px;
+        margin: 0 auto;
+        margin-bottom: 50px;
+        @include under(sm) {
+            width: 100%;
+            padding: 0 20px;
+        }
+    }
+
+    &__title {
+        @extend %IBMPlexMono;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+        color: c(purple);
+
+        // padding-bottom: 40px;
+
+        @include under(sm) {
+            padding-bottom: 30px;
+        }
+    }
+
+    &__text {
+        @extend %IBMPlexSans;
+        font-size: 16px;
+        line-height: 21px;
+        color: c(purple);
+    }
+
+    &__content {
+        padding: 95px 0 44px;
+        @include under(sm) {
+            padding: 35px 20px;
+        }
+    }
+
+    .accordion svg.folder {
+        width: 16px;
+        height: 14px;
+        .cls-1 {
+            fill: none;
+            stroke: #ea6751;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+    }
+    .collapsible-header {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+
+        svg.arrow {
+            width: 15px;
+            height: 15px;
+            &.rotate {
+                -webkit-transform: rotate(180deg);
+                transform: rotate(180deg);
+            }
+            .cls-1 {
+                fill: none;
+                stroke: #EA6751;
+                stroke-linecap: round;
+                stroke-linejoin: round;
+                stroke-width: 3px;
+            }
+        }
+    }
+
+    &__content-btn {
+        width: $col-1*9;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include under(sm) {
+            width: 100%;
+            flex-direction: column;
+            padding: 0 20px;
+        }
+    }
+
+    &__btn {
+        @extend %button-orange-icon;
+        @include under(sm) {
+            margin-bottom: 30px;
+        }
+        // svg.folder {
+        //     width: 16px;
+        //     height: 14px;
+        //     margin-right: 10px;
+        //     .cls-1 {
+        //         stroke: #EA6751;
+        //         fill: none;
+        //     }
+        // }
+    }
+
+    &__collapse {
+        .accordion {
+            .collapsible-header {
+                min-height: 50px;
+                border-bottom: 1px solid #BBBDBF;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                cursor: pointer;
+                .accordion__question {
+                    @extend %IBMPlexMono;
+                    font-size: 17px;
+                    /* line-height: 20px; */
+                    padding-left: 10px;
+                    color: c(orange);
+                }
+            }
+
+            .collapsible-body {
+                height: auto !important;
+                .accordion {
+                    margin-left: $col-1-8*1;
+                    .collapsible-header {
+                        padding-right: $col-1-8*2;
+                        @include under(sm) {
+                            padding-right: 20px;
+                        }
+                    }
+                    .accordion__file {
+                        padding-left: $col-1-8*1;
+                        padding-top: 15px;
+                        border-bottom: 1px solid #BBBDBF;
+                        padding-bottom: 15px;
+                        @include under(sm) {
+                            padding-left: $col-1-8*2;
+                        }
+                        li {
+                            @extend %IBMPlexSans;
+                            display: flex;
+                            font-size: 15px;
+                            line-height: 20px;
+                            letter-spacing: .10px;
+                            text-transform: uppercase;
+                            color: c(orange);
+                            padding: 7px 0;
+                            &:before {
+                                content: url('/images/file.svg');
+                                width: 13px;
+                                height: 18px;
+                                margin-right: 10px;
+                            }
+                        }
+                    }
+                }
+
+            }
+
+            .disabled {
+                .accordion__question {
+                    color: #BCBEC0;
+                }
+                svg.folder .cls-1 {
+                    stroke: #BCBEC0;
+                }
+                ~ svg.arrow .cls-1 {
+                    stroke: #BCBEC0 !important;
+                }
+            }
+        }
+    }
+
+}

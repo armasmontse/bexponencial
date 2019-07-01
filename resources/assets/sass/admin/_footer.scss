@@ -1,0 +1,48 @@
+.row {
+    .footer {
+        background-color: red;
+        width: 100%;
+        bottom: 0;
+        //padding: 8px 0;
+        position: absolute;
+        font-size: 12px;
+        margin-top: 0;
+        border-top: 1px solid #cacccd;
+        background-color: transparent;
+        &__copyright {
+            color: #fff;
+            background-color: initial;
+        }
+        &__container {
+            line-height: 48px;
+        }
+        &__logo {
+            width: 100%;
+            align-self: center;
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: column;
+            align-items: center;
+            & > img {
+                max-width: 63px;
+            }
+        }
+        &__link {
+            color: #58595b;
+            font-weight: 300;
+            text-decoration: underline;
+        }
+        &__row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            color: #58595b;
+            & > span {
+                margin-left: calc(100% - 170px);
+            }
+        }
+    }
+}
+footer.page-footer .footer-copyright {
+    background-color: transparent;
+}

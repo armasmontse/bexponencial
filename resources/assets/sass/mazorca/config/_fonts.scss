@@ -1,0 +1,28 @@
+//_________________________ Config:Fuentes _________________________ \\
+
+/**
+ * Declare fonts using the Mixin
+ */
+
+@include declara-font-face(IBMPlexMono, '../fonts/IBM-Plex-mono-bold/ibmplexmonobold', normal, 400);
+@include declara-font-face(IBMPlexSans, '../fonts/IBM-Plex-sans-regular/ibmplexsansregular', normal, 400);
+@include declara-font-face(IBMPlexSans-SemiBold, '../fonts/IBM-Plex-sans-semibold/ibmplexsanssemibold', italic, 400);
+
+
+/// Refer to font families through mapped variables.
+/// Font families must be written as lists, that is, between parenthesis.
+///
+///
+
+
+//_________________________ Config:Fuentes _________________________ \\
+
+$fonts:(
+	IBMPlexMono: ('IBMPlexMono', serif),
+    IBMPlexSans: ('IBMPlexSans', serif),
+    IBMPlexSans-SemiBold: ('IBMPlexSans-SemiBold', serif)
+);
+
+@function f($font) {
+	@return map-get($fonts, $font);
+}

@@ -1,0 +1,45 @@
+.cltvo_color_picker {
+    margin: 5% 0px;
+    $width: calc(100% / 14);
+    $height: 20px;
+    &__row {
+        height: $height;
+        width: 100%;
+        &--triple {
+            height: $height*3;
+        }
+    }
+    &__color {
+        display: inline-block;
+        width:  $width;
+        height: $height;
+        &--bigger {
+            display: inline-block;
+            width: calc(50% - 0.5px);
+            height: $height*3;
+        }
+    }
+    &__active {
+        border: 2px solid white;
+    }
+    &__container {
+        position: relative;
+    }
+    &--block {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: calc(#{$width} * 4);
+    }
+    &__icon {
+        cursor: pointer;
+        &-container {
+            float: right;
+            width: 40px;
+        }
+    }
+    &__hex {
+        width: calc(100% - 60px);
+        display: inline-block;
+    }
+}

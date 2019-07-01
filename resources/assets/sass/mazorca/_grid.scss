@@ -1,0 +1,567 @@
+
+// /*_________________________ Grid _________________________ */
+// .grid {
+// 	$gutter: 20px;
+// 	$col-1: 100%/12;
+// 	$gutter-pad: $gutter/2;
+//     $pad: $gutter/3;
+// 	$break-container: 1220px;
+// 	//$gutter-sm: s(1, gutter-sm);
+
+// 	&__row {
+// 		position:relative;
+// 		width: 100%;
+// 		min-height: 1px;
+// 	}
+// 	&__container--no-pad,
+// 	&__container--banner,
+// 	&__container {
+// 		position:relative;
+// 		padding: 0 $gutter;
+// 		display: flex;
+// 		flex-wrap: wrap;
+// 		margin-left: auto;
+// 		margin-right: auto;
+// 		max-width: calc(1870px - 20px);
+// 		@include under(sm) {
+// 			padding: $gutter;
+// 		}
+// 		@include under(xs) {
+// 			padding: 10px;
+// 		}
+// 		&--no-pad,
+// 		&--banner {
+// 			padding: 0;
+// 		}
+// 	}
+// 	&__col {
+
+// 		&-1-1,
+// 		&-1-2,
+// 		&-1-3,
+// 		&-1-4,
+// 		&-1-5,
+// 		&-1-6,
+// 		&-1-7,
+// 		&-1-8,
+// 		&-1-9,
+// 		&-1-10,
+// 		&-1-11,
+// 		&-1-12 {
+// 			position:relative;
+// 		}
+// 		&-1-1 {
+// 			width: calc(#{$col-1} * 9);
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 10);
+// 				margin-left: $col-1 !important;
+// 			}
+// 			@include under(xs) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+// 		&-1-1--t {
+// 			width: calc(#{$col-1});
+// 			border: 1px solid black;
+// 		}
+
+// 		&-1-1--f {
+// 			width: calc(#{$col-1} * 10);
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+// 		&-1-4--f{
+// 			width: calc(#{$col-1} * 4);
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+
+// 		&-1-3--f{
+// 			width: calc(#{$col-1} * 3);
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+
+// 		&-1-1--h {
+// 			width: calc(#{$col-1} * 12);
+// 		}
+
+// 		&-1-1--hv {
+// 			position:relative;
+// 			width: calc(#{$col-1} * 8);
+
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+
+// 		&-1-2--hl{
+// 			width: calc(#{$col-1} * 4 );
+// 			padding-left: 0px;
+// 			padding-right: $gutter;
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 				padding-right:  0 !important;
+// 			}
+// 			// @include under(xs) {
+// 			// 	width: 100%;
+// 			// 	margin-left: 0 !important;
+// 			// 	padding-right:  0 !important;
+// 			// }
+
+
+// 		}
+
+// 		&-1-2--hr{
+// 			width: calc(#{$col-1} * 5);
+// 			padding-left: $gutter;
+// 			padding-right: 0px;
+
+// 			@include under(sm) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 				padding-left: 0 !important;
+// 			}
+// 			// @include under(xs) {
+// 			// 	width: 100%;
+// 			// 	margin-left: 0 !important;
+// 			// 	padding-left: 0 !important;
+// 			// }
+
+
+// 		}
+
+// 		&-1-2 {
+// 			width: calc(#{$col-1} * 4.5);
+// 			&:nth-of-type(1) {
+// 				padding-left: 0px;
+// 				padding-right: $gutter/2;
+// 			}
+// 			&:nth-of-type(2) {
+// 				padding-left: $gutter/2;
+// 				padding-right: 0px;
+// 			}
+// 			&--big {
+// 				width: calc(#{$col-1} * 5);
+// 				@include under(sm) {
+// 					width: calc(#{$col-1} * 10);
+// 					margin-left: $col-1 !important;
+// 				}
+// 				@include under(xs) {
+// 					width: 100%;
+// 					margin-left: 0 !important;
+// 				}
+// 			}
+// 			&--small {
+// 				width: calc(#{$col-1} * 3);
+// 				margin-left: $col-1;
+// 				@include under(sm) {
+// 					width: calc(#{$col-1} * 10);
+// 					margin-left: $col-1;
+// 				}
+// 				@include under(xs) {
+// 					width: 100%;
+// 					margin-left: 0 !important;
+// 				}
+// 			}
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 10);
+// 				margin-left: $col-1 !important;
+// 				&:nth-of-type(1) {
+// 					padding: 0px;
+// 				}
+// 				&:nth-of-type(2) {
+// 					padding: 0px
+// 				}
+// 			}
+// 			@include under(xs) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+// 		&-1-3{
+// 			width: calc(#{$col-1} * 3);
+// 			&:nth-of-type(3n-2) {
+// 	            padding-right: calc(#{$gutter-pad} + #{$pad});
+// 	        }
+
+// 	        &:nth-of-type(3n-1) {
+// 	            padding-right: calc(#{$gutter-pad} - #{$pad});
+// 	            padding-left: calc(#{$gutter-pad} - #{$pad});
+// 	        }
+
+// 	        &:nth-of-type(3n) {
+// 	            padding-left: calc(#{$gutter-pad} + #{$pad});
+// 	        }
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 5);
+// 				&:nth-of-type(even) {
+// 					padding-left: $gutter/2;
+// 					padding-right: 0;
+// 				}
+// 				&:nth-of-type(odd) {
+// 					margin-left: $col-1;
+// 					padding-left: 0;
+// 					padding-right: $gutter/2;
+// 				}
+// 			}
+// 			@include under(xs) {
+// 				@include binary-column-padding($reset: true);
+// 				margin-left: 0 !important;
+// 			 	width: 100%;
+// 			}
+// 			&-checkout {
+// 				@include under(sm) {
+// 					width: calc(#{$col-1} * 10);
+// 					&:nth-of-type(odd) {
+// 						margin-left: $col-1;
+// 						padding-right: 0;
+// 					}
+// 				}
+// 				@include under(xs) {
+// 					@include binary-column-padding($reset: true);
+// 					margin-left: 0 !important;
+// 				 	width: 100%;
+// 				}
+// 			}
+// 		}
+// 		&-1-4 {
+// 			width: calc(#{$col-1} * 4);
+// 			&:nth-of-type(even) {
+// 				margin-left: $col-1;
+// 			}
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 10);
+// 				margin-left: $col-1 !important;
+// 			}
+// 			@include under(xs) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 			&--example {
+// 				@include cuaternary-column-padding($gutter);
+// 				width: calc((#{$col-1} * 9) / 4);
+// 			}
+// 			&--shop {
+// 				width: calc((#{$col-1} * 9) / 4);
+// 				&:nth-of-type(4n-3) {
+// 		            padding-right: calc(#{$gutter-pad} + #{$pad});
+// 					margin-left: calc(#{$col-1} * 2);
+// 					@include under($break-container) {
+// 						margin-left: 0;
+// 					}
+// 		        }
+
+// 				&:nth-of-type(4n-2) {
+// 					//padding-right: calc(#{$gutter-pad} - #{$pad});
+// 					padding-right: calc((#{$gutter-pad} + #{$pad}) / 2);
+// 		        }
+
+// 		        &:nth-of-type(4n-1) {
+// 					padding-left: calc((#{$gutter-pad} + #{$pad}) / 2);
+// 		            //padding-left: calc(#{$gutter-pad} - #{$pad});
+// 		        }
+
+// 		        &:nth-of-type(4n) {
+// 		            padding-left: calc(#{$gutter-pad} + #{$pad});
+// 					@include under($break-container) {
+// 						padding-left: 0;
+// 					}
+// 		        }
+
+// 				@include under($break-container) {
+// 					width: calc(#{$col-1} * 3);
+// 					&:nth-of-type(3n-2) {
+// 			            padding-right: calc(#{$gutter-pad} + #{$pad});
+// 						margin-left: calc(#{$col-1} * 2);
+// 						@include under(sm) {
+// 							margin-left: 0;
+// 						}
+// 			        }
+
+// 			        &:nth-of-type(3n-1) {
+// 			            padding-right: calc(#{$gutter-pad} - #{$pad});
+// 			            padding-left: calc(#{$gutter-pad} - #{$pad});
+// 			        }
+
+// 			        &:nth-of-type(3n) {
+// 			            padding-left: calc(#{$gutter-pad} + #{$pad});
+// 			        }
+// 				}
+// 				@include under(sm) {
+// 					width: calc(#{$col-1} * 5);
+// 					&:nth-of-type(even) {
+// 						padding-left: $gutter/2;
+// 						padding-right: 0;
+// 					}
+// 					&:nth-of-type(odd) {
+// 						margin-left: $col-1;
+// 						padding-left: 0;
+// 						padding-right: $gutter/2;
+// 					}
+// 				}
+// 				@include under(xs) {
+// 					@include binary-column-padding($reset: true);
+// 					margin-left: 0 !important;
+// 				 	width: 100%;
+// 				}
+// 			}
+// 		}
+// 		&-1-5 {
+// 			width: calc((#{$col-1} * 5) + #{$gutter});
+// 			padding-right: $gutter;
+// 			//margin-left: calc(#{$col-1} * 2);
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 10);
+// 				margin-left: $col-1 !important;
+// 				padding-right: 0;
+// 			}
+// 			@include under(xs) {
+// 				width: 100%;
+// 				margin-left: 0 !important;
+// 			}
+// 		}
+// 		&-1-6 {
+// 			width: calc((#{$col-1} * 6) + #{$gutter});
+// 			padding-right: $gutter;
+// 			margin-left: $col-1;
+// 			@include under(sm) {
+// 				width: calc(#{$col-1} * 10);
+// 				padding-right: 0;
+// 			}
+// 			@include under(xs) {
+// 				width: 100%;
+// 				margin-left: 0 !important
+// 			}
+// 		}
+// 		&-1-12 {
+// 			width: $col-1;
+// 		}
+// 		&--hide {
+// 			@include under(sm) {
+// 				display: none !important;
+// 			}
+// 			&--shipping {
+// 				@include under(md) {
+// 					display: none !important;
+// 				}
+// 			}
+// 		}
+// 		&-menu {
+// 			width: calc(#{$col-1} * 2);
+// 			position: relative;
+// 		}
+// 	}
+// 	&__offset {
+// 		&-1-4 {
+// 			margin-left: calc((#{$col-1} * 4) - #{$gutter});
+
+// 		}
+// 		&-1-2 {
+// 			margin-left: calc(#{$col-1} * 2);
+
+// 			@include under(sm) {
+// 				margin-left: 0;
+// 			}
+// 		}
+// 		&-1-1 {
+// 			margin-left: calc(#{$col-1});
+
+// 			@include under(sm) {
+// 				margin-left: 0;
+// 			}
+// 		}
+// 		&--sm-1-2 {
+// 			margin-left: calc(#{$col-1} * 2);
+
+// 			@include under(sm) {
+// 				margin-left: 0;
+// 			}
+// 		}
+
+// 	}
+// 	&__box {
+// 		position:relative;
+// 		width: 100%;
+// 	}
+// }
+
+
+// // /*Grid Debug*/
+
+// .debug {
+// 	h1 {
+// 		background-color: black;
+// 		color: white;
+// 		font-size: 40px;
+// 		width: 100%;
+// 	}
+// 	.grid {
+// 		&__row {
+// 			position:relative;
+// 			background-color: antiquewhite;
+// 			min-height: 200px;
+// 		}
+// 		&__container {
+// 			position:relative;
+// 			background-color: thistle;
+// 			min-height: 100px;
+// 			margin-bottom: 20px;
+// 		}
+// 		&__col-1-1,
+// 		&__col-1-2,
+// 		&__col-1-2--big,
+// 		&__col-1-2--small,
+// 		&__col-1-3,
+// 		&__col-1-4,
+// 		&__col-1-4--shop,
+// 		&__col-1-4--example,
+// 		&__col-1-5,
+// 		&__col-1-6,
+// 		&__col-1-7,
+// 		&__col-1-8,
+// 		&__col-1-9,
+// 		&__col-1-10,
+// 		&__col-1-11,
+// 		&__col-menu,
+// 		&__col-1-12 {
+// 			position:relative;
+// 			display: flex;
+// 			&:nth-of-type(even) {
+// 	 			background-color: salmon;
+// 	 			min-height: 100px;
+// 			}
+// 			&:nth-of-type(odd) {
+// 				background-color: teal;
+// 	 			min-height: 100px;
+// 			}
+// 			&--contain-fixed {
+// 				background-color: c(dark);
+// 			}
+// 		}
+
+// 		&__box {
+// 			position: relative;
+// 			background-color: lavender;
+// 			min-height: 50px;
+// 			&--fixed {
+// 				background-color: c(dark);
+// 			}
+// 		}
+
+// 		&__fixedElem {
+// 			background-color: c(dark);
+// 			height: 200px;
+// 		}
+// 	}
+// 	.image {
+// 		&__col {
+// 			&--right,
+// 			&--left {
+// 				@include center('y');
+// 			}
+
+// 			&--right {
+// 				right: 0;
+// 			}
+// 			&--left {
+// 				left: 0;
+// 			}
+// 		}
+// 	}
+// }
+
+// // #grid__fixedElem_JS {
+// // 	height: 200px;
+// // 	background-color: transparentize(c(gold), 0.5);
+// // 	position: fixed;
+// // 	top: 120px;
+// // 	@include under(sm){
+// // 		position: relative;
+// // 		top: 0;
+// // 	}
+// // }
+
+
+// Fonts
+
+
+// Variables
+
+
+// Bootstrap
+//@import '~bootstrap/scss/bootstrap';
+@mixin gridColumnsAuto($colnum, $width) {
+    grid-template-columns: repeat($colnum, $width);
+}
+
+%grid-container {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+}
+
+@mixin gridColumns2($width1, $width2) {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: $width1 $width2;
+}
+
+@mixin gridColumns3($width1, $width2, $width3) {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: $width1 $width2 $width3;
+}
+
+@mixin gridColumns4($width1, $width2, $width3, $width4) {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: $width1 $width2 $width3 $width4;
+}
+
+@mixin gridColumns5($width1, $width2, $width3, $width4, $width5) {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: $width1 $width2 $width3 $width4 $width5;
+}
+
+@mixin gridColumns6($width1, $width2, $width3, $width4, $width5, $width6) {
+    display: grid;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    grid-template-columns: $width1 $width2 $width3 $width4 $width5 $width6;
+}
+
+.grid-justify-evenly {
+    justify-content: space-evenly;
+}
+
+.grid-justify-right {
+    justify-content: right;
+}
+
+.grid-item {
+    border: 1px solid $blue;
+}
+
+.grid_cols2{
+    @extend %grid-container;
+    @include gridColumns2(50%,50%);
+}
+.grid_cols4{
+    @extend %grid-container;
+    @include gridColumns4(auto,auto,auto,auto);
+}

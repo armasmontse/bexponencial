@@ -1,0 +1,153 @@
+%button, .button {
+    font-family: f(IBMPlexSans-SemiBold);
+    font-size: 15px;
+    text-align: center;
+    cursor: pointer;
+
+    width: 100%;
+    max-width: 215px;
+    min-height: 50px;
+
+    display: block;
+}
+
+%button-one, .button-one {
+    @extend %button;
+    background-color: transparent;
+    color: c(green);
+    border: 0;
+    &:hover {
+        background-color: c(green);
+        color: c(white)
+    }
+}
+
+%button-two, .button-two {
+    @extend %button;
+    background-color: transparent;
+    color: c(green);
+    display: block;
+    border: 1px solid #fff;
+    &:hover {
+        background-color: c(green-light);
+        border: 0;
+    }
+}
+
+%button-three, .button-three {
+    @extend %button;
+    background-color: c(green);
+    border: 0;
+    color: c(white);
+    &:hover {
+        background-color: c(green-light);
+        color: c(white);
+    }
+}
+
+%button-four, .button-four {
+    @extend %button;
+    background-color: c(green);
+    border: 0;
+    color: c(white);
+    &:hover {
+        background-color: c(green-light);
+        color: c(white);
+    }
+}
+
+%button-five, .button-five {
+    @extend %button;
+    background-color: c(green);
+    border: 0;
+    color: c(white);
+    &:hover {
+        background-color: c(green-light);
+        color: c(white);
+    }
+
+}
+
+
+%button-green, .button-green {
+    @extend %button-three;
+    margin: 0 auto;
+    display: block;
+    letter-spacing: 0.5px;
+}
+
+%button-orange-icon, .button-orange-icon {
+    @extend %IBMPlexMono;
+    font-size: 17px;
+    line-height: 20px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 175px;
+    min-height: 37px;
+
+    background-color: transparent;
+    color: c(orange);
+    border: 0;
+    box-shadow: 0px 0px 10px #ea675182;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    &:before {
+        content: url('/images/folder.svg');
+        width: 16px;
+        height: 14px;
+        margin-right: 10px;
+        margin-top: -5px;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 20px #ea675182;
+    }
+}
+
+%button-secretFile,
+.button-secretFile {
+    @extend %IBMPlexSans-SemiBold;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: .5px;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    max-width: 215px;
+    min-height: 50px;
+
+    background-color: c(green);
+    border: 0;
+    color: c(white);
+    box-shadow: 0px 0px 10px #ea675182;
+
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0 auto;
+    margin-top: 45px;
+
+    &:after {
+        content: url('/images/images-news/logros1.svg');
+        width: 30px;
+        height: 30px;
+        margin-left: 5px;
+        margin-top: 0;
+    }
+
+    span {
+        margin-left: 5px;
+        color: #FFC31D;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 20px #ea675182;
+    }
+}

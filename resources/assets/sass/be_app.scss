@@ -1,0 +1,71 @@
+@charset "UTF-8";
+//===Mazorca Core===//
+@import "node_modules/mazorca-core/_mazorca-core.scss";
+
+//===Configs===//
+@import "mazorca/config/_config";
+
+
+//===Vendor===//Css begins compling here
+// @import "vendor/bootstrap/_bootstrap.scss";
+
+//===Mazorca===//
+@import "mazorca/_elements";
+@import "mazorca/_grid"; //
+@import "mazorca/_components";
+@import "mazorca/_theme-helpers";
+@import "mazorca/_modules";
+
+
+@import 'variables';
+
+
+/*
+	Containers
+*/
+.cpointer{
+	border-radius: 50%;
+    background: yellow;
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+		z-index: 4;
+}
+#img-maps {
+    display: table;
+    margin: auto;
+}
+.horizontal .spacer.s0 {
+	min-width: 1px;
+}
+.horizontal .spacer.s1 {
+	min-width: 100px;
+}
+.horizontal .spacer.s2 {
+	min-width: 200px;
+}
+.horizontal .spacer.s3 {
+	min-width: 300px;
+}
+.horizontal .spacer.s4 {
+	min-width: 1200px;
+}
+.horizontal .spacer.s5 {
+	min-width: 500px;
+}
+.horizontal .spacer.s6 {
+	min-width: 600px;
+}
+.horizontal .spacer.s7 {
+	min-width: 700px;
+}
+.horizontal .spacer.s8 {
+	min-width: 800px;
+}
+.horizontal .spacer.s9 {
+	min-width: 900px;
+}
+.horizontal .spacer.s10 {
+	min-width: 1000px;
+}

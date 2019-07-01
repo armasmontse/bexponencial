@@ -1,0 +1,97 @@
+.email {
+
+    .card {
+
+        margin: 150px auto !important;
+
+        &__titulo {
+            margin-bottom: 50px;
+        }
+
+        &__subtitulo {
+            text-transform: initial !important;
+            line-height: 20px;
+            font-size: 18px !important;
+            margin-bottom: 50px;
+        }
+
+        form {
+
+            .form__group {
+                label {
+                    @extend %IBMPlexSans;
+                    font-size: 13px !important;
+                    color: c(green) !important;
+                    text-transform: uppercase;
+                    margin-bottom: 5px;
+
+                    &.terminos {
+                        @extend %IBMPlexSans;
+                        font-size: 12px;
+                        color: c(green);
+                        text-transform: inherit;
+                    }
+                }
+
+                input {
+                    height: 35px;
+                    border: none;
+                    margin-top: 5px;
+                    background-color: $input-bg;
+                    @extend %IBMPlexSans;
+                    font-size: 16px;
+                    color: #BBBDBF;
+
+                    &.checkbox {
+                        width: 10px;
+                        height: 10px;
+                        display: flex;
+                    }
+
+                    &::-webkit-input-placeholder {
+                        /* Chrome/Opera/Safari */
+                        color: #BBBDBF;
+                        font-size: 16px;
+                        text-transform: lowercase;
+                        @extend %IBMPlexSans;
+                    }
+
+
+                }
+
+                button {
+                    width: 215px;
+                    height: 50px;
+                    background-color: c(green);
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: none;
+                    margin: 30px auto 0;
+                    @extend %IBMPlexSans-SemiBold;
+                    font-size: 15px;
+                    color: c(white);
+                    letter-spacing: 2px;
+                }
+
+                .form-check {
+                    display: flex;
+                }
+            }
+
+            .link {
+                @extend %IBMPlexSans;
+                font-size: 12px;
+                color: c(green);
+
+                &__forgot {}
+
+                &__registro {
+                    display: flex;
+                    justify-content: center;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
+}

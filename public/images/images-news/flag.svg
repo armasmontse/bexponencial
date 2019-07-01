@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25">
+    <defs>
+        <style>.cls-1{fill:none;}.cls-2{fill:#ffc220;}</style>
+    </defs>
+    <title>flag</title>
+    <g id="Capa_2" data-name="Capa 2">
+        <g id="Layer_1" data-name="Layer 1">
+            <rect class="cls-1" width="25" height="25"/>
+            <path class="cls-2" d="M22.74,5.29c-3.89,0-11.35-3.95-18.5-4.61V.58H2.11v23H4.24V14.92c8.2.59,14.72,4.7,18.5,4.7ZM11.45,11.52,4.24,13.45V2s6.3,2.83,7.21,4.11L5.14,7.83C6.91,8.66,10.75,10.55,11.45,11.52Zm3.15-1.18a1.53,1.53,0,1,1,1.53-1.53A1.53,1.53,0,0,1,14.6,10.34Zm3.94,1.07a1.54,1.54,0,1,1,1.54-1.54A1.54,1.54,0,0,1,18.54,11.41Z"/>
+        </g>
+    </g>
+</svg>

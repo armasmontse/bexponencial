@@ -1,0 +1,1175 @@
+.village_section {
+    display: inline-block;
+    vertical-align: top;
+    height: 100%;
+    min-width: 1000px
+}
+
+#village {
+    white-space: nowrap;
+    height: calc(100vh - 130px);
+    @include under(md) {
+        height: calc(100vh - 180px);
+    }
+}
+
+.scene {
+    width: 100vw;
+    left: 0 !important;
+    height: 100%;
+    top: 0 !important;
+    position: relative !important;
+    display: inline-block;
+}
+
+.parallaxParent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.scrollContainer::-webkit-scrollbar {
+    width:0px;
+}
+.horizontal.scrollContainer {
+    overflow:hidden;
+}
+
+.sunset {
+    width: 300px;
+
+}
+
+.islandP {
+    //top:-20%;
+    width: 100%;
+    height: 100%;
+}
+
+.island {
+    height: 100%;
+    width: 100%;
+}
+
+.parallaxLayer {
+    position: absolute;
+}
+
+.village__controls {
+    position: absolute;
+    bottom: 100px;
+    width: 100%;
+    z-index: 9;
+    @include under(1024px) {
+        bottom: 111px;
+    }
+    ul {
+        display: table;
+        margin: auto;
+        /* margin-top: 25px; */
+        display: flex;
+        width: 100%;
+        max-width: 490px;
+        height: 26px;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        cursor: pointer;
+        @include under(sm) {
+            max-width: 290px;
+        }
+
+        li {
+            height: 12px;
+            width: 12px;
+            display: inline-block;
+            border-radius: 50%;
+            background: #fff;
+        }
+
+        a.village-selector {
+            height: 27px;
+            width: 27px;
+            cursor: pointer;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            // margin: 0 70px;
+            &:first-child {
+                margin-left: -10px;
+            }
+            &:last-child {
+                margin-right: -10px;
+            }
+            &:hover {
+                // background-color: red;
+                &:after {
+                    opacity: 1;
+                }
+            }
+            &.info {
+                &:before {
+                    content: url('/images/aldea1/info.svg');
+                    width: 12px;
+                    height: 12px;
+                    position: absolute;
+                    top: auto;
+                    left: auto;
+                }
+            }
+
+            &:after {
+                // border: 3px solid #fff;
+                content: url('/images/images-news/controls-hover.svg');
+                width: 27px;
+                height: 27px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                opacity: 0;
+
+            }
+        }
+
+    }
+
+    &-back {
+        background-image: url('/images/line-dashed.svg');
+        height: 3px !important;
+        width: 100%;
+    }
+}
+
+.scrollmagic-pin-spacer {
+    padding-left: 0 !important;
+}
+
+.horizontal .spacer {
+    //background-image: url("../img/example_bg_spacer_h.gif");
+    margin-bottom: 0;
+    min-height: initial;
+    min-width: 100px;
+    height: 100%;
+    display: inline-block;
+    vertical-align: top;
+}
+.missions {
+    background-image: url('/images/layer-1-fondo.svg');
+    // // width: 1545px;
+    // // width: 2880px;
+    // // height: 730px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 50px 0;
+    &.root-vue {
+        padding: 0;
+    }
+}
+
+
+#section1 .parallaxParent.islandP {
+    // background-image: url('/images/isla-completa.svg');
+    // background-repeat: no-repeat;
+    // width: 100%;
+    // height: 100%;
+    // background-size: contain;
+    // img.island.parallaxLayer {
+    //     // width: 6981px;
+    //     // width: 2880px;
+    //     // width: 5584px;
+    //     width: 100%;
+    //     // height: -webkit-fill-available;
+    //     object-fit: contain;
+    // }
+    img.island.parallaxLayer {
+        position:absolute;
+    }
+
+}
+
+.scene .island.parallaxLayer.img-maps {
+    // object-fit: cover;
+    // height: 162%;
+    // left: -19%;
+    // top: -60%;
+
+
+    object-position: center;
+    width: 100%;
+    height: 100%;
+    left: 0;
+
+    &.mobile {
+        object-fit: contain;
+        object-position: center;
+        // top: -10%;
+        height: auto;
+
+        @include over(1025px) {
+            visibility: hidden !important;
+        }
+        @media (min-width: 1024px) and (min-height: 768px) {
+            // Ipad normal
+            // background-color: red;
+            top: -38%;
+        }
+    }
+
+    &.desktop {
+        object-fit: cover;
+        @include under(md) {
+            visibility: hidden !important;
+        }
+    }
+
+
+    //BACKGROUND
+
+    // background-image: url('/images/aldea1/zamna-31.jpg');
+    // background-repeat: no-repeat;
+    // background-position: center;
+    // width: 100%;
+    // height: 100%;
+    // background-size: cover;
+
+    // @include under(md) {
+    //     background-image: url('/images/aldea1/zamna-2.jpg');
+    //     background-size: cover;
+    //     width: 100%;
+    //     height: 100%;
+    // }
+
+    // @include under(sm) {
+    //     object-fit: contain;
+    // }
+    // height: 150%;
+    // object-position: center;
+}
+
+//N U B E S
+#nubes {
+    width: 200%;
+    height: 65%;
+    top: 1%;
+    z-index: 2;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+#nubes1 {
+    width: 100%;
+    height: 35%;
+    z-index: 2;
+    top: 45%;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+#nubes2 {
+    width: 200%;
+    z-index: 2;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+#nubes3 {
+    width: 200%;
+    z-index: 2;
+    top: -15px;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+#nubes4 {
+    width: 400%;
+    height: 30%;
+    z-index: 3;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+//S O L
+#zamna {
+    width: 23.814vw;
+    height: 22.84vh;
+    z-index: 2;
+    top: 4%;
+    left: .5%;
+
+
+    //M O B I L E
+    @media (max-width: 414px) and (max-height: 900px) {
+        // background-color: brown;
+        top: -6%;
+    }
+
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+
+//S O L
+#sol {
+    width: 8.813vw;
+    height: 17.84vh;
+    z-index: 2;
+    top: -14%;
+    left: 33%;
+
+
+    //M O B I L E
+    @media (max-width: 414px) and (max-height: 900px) {
+        // background-color: brown;
+        top: -6%;
+    }
+
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+//R O S A
+#rosa {
+    width: 7.813vw;
+    height: 15.84vh;
+    z-index: 2;
+    top: 2%;
+    left: 38.5%;
+
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+//B A R C O S
+#barco1,
+#barco2,
+#barco3 {
+    width: 100px;
+    height: 40px;
+    z-index: 1;
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+#barco1 {
+    top: 88%;
+}
+
+#barco2 {
+    top: 2%;
+}
+
+#barco3 {
+    width: 100px;
+    height: 40px;
+    top: 80%;
+}
+
+//M O N T A Ñ A S
+#montanas {
+    // width: 800px;
+    // height: 600px;
+    // z-index: 2;
+    // bottom: 0%;
+    // left: 60%;
+    width: 10%;
+    height: 22%;
+    z-index: 1;
+    bottom: -2%;
+    left: 61%;
+
+    @media (max-width: 414px) and (max-height: 900px) {
+        // background-color: brown;
+        top: 240px;
+    }
+
+    @media (max-width: 414px) and (max-height: 820px) {
+        // background-color: yellow;
+        top: 220px;
+    }
+
+    @media (max-width: 414px) and (max-height: 740px) {
+        //Iphone 6/7/8 plus
+        // background-color: green;
+        top: 250px;
+    }
+
+    @media (max-width: 414px) and (max-height: 680px) {
+        // background-color: purple;
+        top: 200px;
+    }
+
+    @media (max-width: 414px) and (max-height: 580px) {
+        // background-color: red;
+        top: 200px;
+    }
+
+    @media (max-width: 380px) and (max-height: 680px) {
+        //Iphone 6/7/8
+        // background-color: orange;
+        top: 220px;
+    }
+
+    @media (max-width: 380px) and (max-height: 580px) {
+        //Iphone 5
+        background-color: transparent;
+        top: 200px;
+    }
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+//R E G U I L E T E S
+.container-reguilete {
+    position: absolute;
+
+    .content {
+        position: relative;
+        width: 100%;
+        height: 100%;
+    }
+    &.center {
+        top: 34%;
+        left: 39.2%;
+        width: 4%;
+        height: 11%;
+        @include under(1700px) {
+            left: 38.5%;
+        }
+        @include under(1500px) {
+            left: 37.2%;
+        }
+
+        //RESPONSIVO MOBILE
+        @media (max-width: 414px) and (max-height: 900px) {
+            // background-color: brown;
+            // top: 62.7%;
+            // top: 250px;
+            top: 142px;
+        }
+
+        @media (max-width: 414px) and (max-height: 820px) {
+            // background-color: yellow;
+            top: 130px;
+            // top: 43.7%;
+        }
+
+        @media (max-width: 414px) and (max-height: 740px) {
+            //Iphone 6/7/8 plus
+            // background-color: green;
+            // top: 67.7%;
+            // top: 142px;
+            top: 160px;
+        }
+
+        @media (max-width: 414px) and (max-height: 680px) {
+            // background-color: purple;
+            // top: 62.7%;
+            // top: 250px;
+            top: 142px;
+        }
+
+        @media (max-width: 414px) and (max-height: 580px) {
+            // background-color: red;
+            // top: 62.7%;
+            // top: 250px;
+            // top: 77.6%;
+        }
+
+        @media (max-width: 380px) and (max-height: 680px) {
+            //Iphone 6/7/8
+            // background-color: orange;
+            // top: 62.7%;
+            top: 142px;
+            // top: 77.6%;
+        }
+
+        @media (max-width: 380px) and (max-height: 580px) {
+            //Iphone 5
+            // background-color: transparent;
+            // top: 62.7%;
+            top: 126px;
+            // top: 77.6%;
+        }
+
+        @media (min-width: 768px) and (min-height: 1024px) {
+            // Ipad normal
+            // background-color: red;
+            top: 37%;
+        }
+
+        // @include under() {
+        //     top: 46%;
+        // }
+
+        // @include under(1300px) {
+        //     right: 7.5%;
+        // }
+        .reguilete {
+            position: absolute;
+            // width: 37px;
+            // height: 70px;
+            width: 1.9277vw;
+            height: 7.392vh;
+
+            @include under(sm) {
+                height: 6.392vh;
+                // max-height: 7.392vh;
+            }
+            @include under(xs) {
+                height: 6.04vh;
+                width: 1.74vw;
+            }
+
+            &-1 {
+                bottom: 0;
+                left: 0;
+            }
+
+            &-2 {
+                bottom: 16%;
+                left: 13%;
+            }
+
+            &-3 {
+                // bottom: 55%;
+                bottom: 33%;
+                left: 31%;
+            }
+
+            &-4 {
+                bottom: 0;
+                left: 53%;
+            }
+
+            &-5 {
+                bottom: -20%;
+                left: 67%;
+            }
+
+            &-6 {
+                bottom: 10%;
+                left: 78%;
+            }
+
+            &-7 {
+                bottom: 10%;
+                left: -6%;
+            }
+        }
+    }
+    &.left {
+        top: 79%;
+        left: 27.7%;
+        width: 8%;
+        height: 14%;
+
+        @include under(sm) {
+            height: 6.392vh;
+            // max-height: 7.392vh;
+        }
+
+        @media (max-width: 414px) and (max-height: 900px) {
+            // background-color: brown;
+            top: 240px;
+        }
+
+        @media (max-width: 414px) and (max-height: 820px) {
+            // background-color: yellow;
+            top: 215px;
+        }
+
+        @media (max-width: 414px) and (max-height: 740px) {
+            //Iphone 6/7/8 plus
+            // background-color: green;
+            top: 240px;
+        }
+
+        @media (max-width: 414px) and (max-height: 680px) {
+            // background-color: purple;
+            top: 190px;
+        }
+
+        @media (max-width: 414px) and (max-height: 580px) {
+            // background-color: red;
+        }
+
+        @media (max-width: 380px) and (max-height: 680px) {
+            //Iphone 6/7/8
+            // background-color: orange;
+            top: 220px;
+        }
+
+        @media (max-width: 380px) and (max-height: 580px) {
+            //Iphone 5
+            // background-color: transparent;
+            top: 190px;
+        }
+
+        @media (min-width: 768px) and (min-height: 1024px) {
+            // Ipad normal
+            // background-color: red;
+            top: 55%;
+        }
+
+        .reguilete {
+            position: absolute;
+            // width: 37px;
+            // height: 70px;
+            width: 1.9277vw;
+            height: 7.392vh;
+
+            @include under(sm) {
+                height: 6.392vh;
+                // max-height: 7.392vh;
+            }
+
+            @include under(xs) {
+                height: 6.04vh;
+                width: 1.74vw;
+            }
+
+            &-1 {
+                bottom: 0;
+                left: 0;
+            }
+
+            &-2 {
+                top: 4%;
+                left: 12%;
+            }
+
+            &-3 {
+                top: 4%;
+                left: 22%;
+            }
+
+            &-4 {
+                top: 4%;
+                left: 33%;
+            }
+
+            &-5 {
+                top: 4%;
+                left: 43%;
+            }
+
+            &-6 {
+                top: 38%;
+                left: 56%
+            }
+
+            &-7 {
+                top: 38%;
+                left: 66%
+            }
+
+            &-8 {
+                top: 38%;
+                left: 76%
+            }
+
+            &-9 {
+                top: 38%;
+                left: 86%
+            }
+
+            &-10 {
+                top: 6%;
+                left: 100%;
+            }
+
+            &-11 {
+                top: 60%;
+                left: 7%;
+            }
+
+            &-12 {
+                top: 60%;
+                left: 17%;
+            }
+
+            &-13 {
+                top: 60%;
+                left: 27%;
+            }
+        }
+    }
+
+    &.center-right {
+        top: 78.7%;
+        right: 35%;
+        width: 5%;
+        height: 11%;
+        // width: 1.9277vw;
+        // height: 7.392vh;
+
+
+
+        //RESPONSIVO MOBILE
+        @media (max-width: 414px) and (max-height: 900px) {
+            // background-color: brown;
+            top: 240px;
+        }
+
+        @media (max-width: 414px) and (max-height: 820px) {
+            // background-color: yellow;
+            top: 235px;
+            // top: 43.7%;
+        }
+
+        @media (max-width: 414px) and (max-height: 740px) {
+            //Iphone 6/7/8 plus
+            // background-color: green;
+            // top: 67.7%;
+        }
+
+        @media (max-width: 414px) and (max-height: 680px) {
+            // background-color: purple;
+            // top: 62.7%;
+            // top: 250px;
+        }
+
+        @media (max-width: 414px) and (max-height: 580px) {
+            // background-color: red;
+            // top: 62.7%;
+            top: 250px;
+            // top: 77.6%;
+        }
+
+        @media (max-width: 380px) and (max-height: 680px) {
+            //Iphone 6/7/8
+            // background-color: orange;
+            // top: 62.7%;
+            top: 220px;
+            // top: 77.6%;
+        }
+
+        @media (max-width: 380px) and (max-height: 580px) {
+            //Iphone 5
+            // background-color: transparent;
+            // top: 62.7%;
+            top: 190px;
+            // top: 77.6%;
+        }
+
+        @media (min-width: 768px) and (min-height: 1024px) {
+            // Ipad normal
+            // background-color: red;
+            top: 55%;
+        }
+        // @media (max-width: 1150px) and (max-height: 900px) {
+        //     background-color: yellow;
+        //     // top: 77.6%;
+        // }
+
+        @include under(sm) {
+            height: 6.392vh;
+            // max-height: 7.392vh;
+        }
+
+        .reguilete {
+            position: absolute;
+            // width: 37px;
+            // height: 70px;
+            width: 1.9277vw;
+            height: 7.392vh;
+
+            @include under(sm) {
+                height: 6.392vh;
+                // max-height: 7.392vh;
+            }
+
+            @include under(xs) {
+                height: 6.04vh;
+                width: 1.74vw;
+            }
+
+            &-1 {
+                bottom: -23%;
+                right: 32%;
+            }
+
+            &-2 {
+                bottom: -20%;
+                right: 14%;
+            }
+
+            &-3 {
+                bottom: 9%;
+                right: 0%;
+            }
+
+            &-4 {
+                top: 8%;
+                left: 11%;
+            }
+
+            &-5 {
+                top: 8%;
+                left: 29%;
+            }
+
+            &-6 {
+                top: 8%;
+                left: 45%;
+            }
+
+            &-7 {
+                top: 8%;
+                left: -6%;
+            }
+        }
+    }
+
+    &.right {
+        top: 32%;
+        right: 13.5%;
+        width: 12vw;
+        height: 9.5vh;
+        @include under(1700px) {
+            right: 10.5%;
+        }
+        @include under(1640px) {
+            right: 10.5%;
+        }
+        @include under(1500px) {
+            right: 6.5%;
+        }
+        @include under(1300px) {
+            right: 7.5%;
+        }
+
+        @include under(sm) {
+            height: 7.5vh;
+
+
+        }
+
+        //Respondive Ipad 768 X 1024
+
+
+        //Respondive Movil
+        @media (max-width: 414px) and (max-height: 900px) {
+            // background-color: brown;
+            top: 120px;
+            right: 190px;
+        }
+
+        @media (max-width: 414px) and (max-height: 820px) {
+            // background-color: yellow;
+            top: 128px;
+            right: 225px;
+        }
+
+        @media (max-width: 414px) and (max-height: 740px) {
+            //Iphone 6/7/8 plus
+            // background-color: green;
+            top: 155px;
+            right: 245px;
+        }
+
+        @media (max-width: 414px) and (max-height: 680px) {
+            // background-color: purple;
+            top: 120px;
+            right: 190px;
+        }
+
+        @media (max-width: 414px) and (max-height: 580px) {
+            // background-color: red;
+            top: 120px;
+            right: 190px;
+        }
+
+        @media (max-width: 380px) and (max-height: 680px) {
+            //Iphone 6/7/8
+            // background-color: orange;
+            top: 140px;
+            right: 225px;
+        }
+
+        @media (max-width: 380px) and (max-height: 580px) {
+            //Iphone 5
+            // background-color: transparent;
+            top: 120px;
+            right: 190px;
+        }
+
+        @media (min-width: 768px) and (min-height: 1024px) {
+            // Ipad normal
+            // background-color: red;
+            top: 35%;
+            right: 15%;
+        }
+
+        .reguilete {
+            position: absolute;
+            // width: 37px;
+            // height: 70px;
+            // width: 16.1%;
+            // height: 78%;
+            width: 1.9277vw;
+            height: 7.392vh;
+            @include under(sm) {
+                height: 6.392vh;
+                // max-height: 7.392vh;
+            }
+
+            @include under(xs) {
+                height: 6.04vh;
+                width: 1.74vw;
+            }
+
+            &-1 {
+                bottom: -20%;
+                left: 10%;
+            }
+
+            &-2 {
+                bottom: -20%;
+                left: 35%;
+            }
+
+            &-3 {
+                bottom: -20%;
+                left: 65%;
+            }
+
+            &-4 {
+                top: -20%;
+                left: 22%;
+            }
+
+            &-5 {
+                top: -20%;
+                left: 52%;
+            }
+
+            &-6 {
+                top: -20%;
+                left: 78%;
+            }
+
+            &-7 {
+                top: -20%;
+                left: -6%;
+            }
+        }
+    }
+}
+
+
+//POSTE
+.poste {
+    // width: 6px;
+    // height: 50px;
+    z-index: 2;
+    bottom: 0;
+    left: 40%;
+
+
+    width: .313vw;
+    height: 5.28vh;
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+
+}
+
+.elice {
+    // width: 60px;
+    // height: 60px;
+    // width: 138%;
+    // height: 74%;
+    z-index: 1;
+    top: -14%;
+    left: -33.5%;
+    // top: -12%;
+    // left: -22.5%;
+    width: 3.125vw;
+    height: 6.336vh;
+    img.sland.parallaxLayer {
+        position: absolute;
+    }
+}
+
+
+#imagemap{
+  width:100%;
+  height:100%;
+  position: absolute;
+}
+
+.mission {
+
+    &-item {
+        z-index: 4;
+        position: absolute;
+        top: 50%;
+        left: 20%;
+        border-radius: 50%;
+        height: 150px;
+        // background: white;
+        // z-index: 4;
+        width: 150px;
+        // display: flex !important;
+        // flex-direction: column;
+        // align-items: center;
+        // justify-content: center;
+        // color: #ffc31d;
+
+        .title {
+            @extend %IBMPlexMono;
+            font-size: 21px;
+            line-height: 25px;
+            color: #FFC31D;
+        }
+
+        &:hover {
+            p.center-date {
+                background-color: #FFE7A5;
+            }
+        }
+    }
+
+    &_link {
+        &.mobile{
+            display: block;
+            &:first-of-type {
+                background-color: red;
+
+                svg.mission-new {
+                    display: none;
+                }
+
+                .title.center-date {
+                    &:after {
+                        content: url('/images/images-news/info.svg');
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        top: 55%;
+                    }
+                }
+            }
+            @include over(1025px) {
+                display: none !important;
+            }
+        }
+
+        &.desktop{
+            display: block;
+            &:first-of-type {
+                background-color: red;
+
+                svg.mission-new {
+                    display: none;
+                }
+
+                .title.center-date {
+                    &:after {
+                        content: url('/images/images-news/info.svg');
+                        width: 25px;
+                        height: 25px;
+                        position: absolute;
+                        top: 55%;
+                    }
+                }
+            }
+            @include under(md) {
+                display: none !important;
+            }
+        }
+    }
+}
+
+
+//G R A F I C S
+.donut-chart {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    svg.mission-new {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 55%;
+
+        .cls-1 {
+            fill: none;
+        }
+
+        .cls-2 {
+            fill: #ffc220;
+        }
+    }
+}
+
+p.center-date {
+    background: #fff;
+    position: absolute;
+    text-align: center;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 110px;
+    height: 110px;
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    // justify-content: end;
+    padding-top: 30px;
+    align-items: center;
+    box-shadow: 0px 0px 20px 0px #a0a0a0;
+}
+
+.center-date span.scnd-font-color {
+    line-height: 0;
+}
+
+svg.mountains {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 40%;
+    .cls-1 {
+        fill: #FFC31D;
+        z-index: 9999;
+    }
+}
+
+
+// .donut-chart div {
+//     width: 140px !important;
+//     height: 140px !important;
+//     canvas {
+//         width: 140px !important;
+//         height: 140px !important;
+//     }
+// }

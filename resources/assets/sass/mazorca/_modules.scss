@@ -1,0 +1,31 @@
+//_________________________ General _________________________ \\
+
+@import "modules/general/_header";
+@import "modules/general/_footer";
+@import "modules/general/_sidebar";
+
+//________________________ Sections ________________________ \\
+
+// @import "modules/sections/_contact";
+@import "modules/platform/_preset";
+@import "modules/platform/_dropdown";
+@import "modules/platform/_main";
+
+@import "modules/platform/_navbar-user";
+@import "modules/platform/_account";
+@import "modules/platform/_missions";
+@import "modules/platform/_timeline";
+@import "modules/platform/_achievements";
+@import "modules/platform/_progress";
+@import "modules/platform/_ranking";
+@import "modules/platform/_faq";
+@import "modules/platform/_drive";
+@import "modules/platform/_message";
+@import "modules/platform/_aldea-zamna";
+@import "modules/platform/_drive-single";
+@import "modules/platform/_modals";
+@import "modules/platform/_modal-help";
+@import "modules/platform/_loader";
+@import "modules/platform/_login";
+@import "modules/platform/_secretFile";
+@import "modules/platform/_emailReset";

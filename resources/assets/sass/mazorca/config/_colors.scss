@@ -1,0 +1,38 @@
+$colors: (
+	base:	     #000100,
+    black: 	     #000000,
+    gray:        #BCBEC0,
+	gray-dark:   #58595B,
+    white:       #ffffff,
+    orange:      #EA6751,
+    cyan:        #0094AE,
+    yellow:      #ffc43d,
+    green:       #259C7A,
+    purple:      #5D539E,
+    green-light: #C7B743,
+    gray-light:  #F2F2F2,
+);
+
+@function c($color:base) {
+	@return map-get($colors, $color);
+}
+
+$colorForeground: c();
+$colorBackground: c(white);
+$colorFeatured: c(azul);
+$colorError: #8A1010;
+
+
+
+// Colors
+$blue: #3490dc;
+$indigo: #6574cd;
+$purple: #595b9d;
+$pink: #f66D9b;
+$red: #e3342f;
+$orange: #f6993f;
+$yellow: #ffed4a;
+$green: #38c172;
+$teal: #4dc0b5;
+$cyan: #6cb2eb;
+$input-bg: #f1f1f1;

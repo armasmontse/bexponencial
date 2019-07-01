@@ -1,0 +1,74 @@
+%title {
+    font-family: f(sans);
+    font-size: 12px;
+    font-weight: normal;
+    color: c();
+    text-transform: uppercase;
+}
+
+// M I S S I O N S
+
+%title-aldea, .title-aldea {
+    @extend %IBMPlexMono;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    color: #f4832f;
+    text-transform: uppercase;
+}
+
+%title-missions, .title-missions {
+    @extend %IBMPlexMono;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: .2px;
+    color: #f4832f;
+}
+
+%sbtitle-missions, .sbtitle-missions {
+    @extend %IBMPlexSans;
+    font-size: 15px;
+    line-height: 20px;
+    letter-spacing: .1px;
+    color: c(green);
+}
+
+%title-retos-text, .title-retos-text {
+    @extend %IBMPlexMono;
+    font-size: 15px;
+    line-height: 18px;
+    color: c(green);
+}
+
+//P R O G R E S S
+
+%title-progress,
+.title-progress {
+    @extend %IBMPlexSans;
+    font-size: 20px;
+    line-height: 24px;
+    color: c(orange);
+}
+
+// D R I V E   S I N G L E
+
+%title-drive-single,
+.title-drive-single {
+    @extend %IBMPlexSans;
+    font-size: 15px;
+    line-height: 15px;
+    letter-spacing: .1px;
+    text-transform: uppercase;
+}
+
+
+// A R C H I V O   S E C R E T O
+
+%title-secret-file,
+.title-secret-file {
+    @extend %IBMPlexMono;
+    font-size: 30px;
+    line-height: 36px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}

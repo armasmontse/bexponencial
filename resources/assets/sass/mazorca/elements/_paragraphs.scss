@@ -1,0 +1,57 @@
+%paragraph, .paragraph {
+    color: #231f20;
+    line-height: 18px;
+    font-size: 16px;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+%paragraph-missions-desc, .paragraph-missions-desc {
+    @extend %IBMPlexSans;
+    font-size: 14px;
+    line-height: 20px;
+    color: c(green);
+}
+
+%paragraph-missions-question, .paragraph-missions-question {
+    @extend %IBMPlexSans;
+    font-size: 16px;
+    line-height: 25px;
+}
+
+//E S T A T U S
+%paragraph-estatus-date,
+.paragraph-estatus-date {
+    @extend %IBMPlexSans;
+    font-size: 12px;
+    line-height: 20px;
+    color: c(purple);
+}
+
+%paragraph-estatus-text,
+.paragraph-estatus-text {
+    @extend %IBMPlexSans-SemiBold;
+    font-size: 15px;
+    line-height: 20px;
+    color: c(purple);
+}
+
+// D R I V E   S I N G L E
+
+%paragraph-drive-single,
+.paragraph-drive-single {
+    @extend %IBMPlexSans;
+    font-size: 16px;
+    line-height: 25px;
+    letter-spacing: .1px;
+    color: #000;
+}
+
+%paragraph-drive-single-yellow,
+.paragraph-drive-single-yellow {
+    @extend %IBMPlexMono;
+    font-size: 15px;
+    line-height: 20px;
+    color: #fff;
+}
+

@@ -1,0 +1,41 @@
+%link {
+	color: c();
+	cursor: pointer;
+	font-family: f(sans);
+	font-size: 12px;
+	font-weight: normal;
+	text-decoration: none;
+
+	&:hover,
+	&:active {
+		color: c(gold);
+	}
+}
+
+%link-item, .link-item {
+    @extend %link;
+    @extend %IBMPlexMono;
+    color: c(green);
+    font-size: 15px;
+    line-height: 18px;
+
+    &:hover,
+    &:active {
+        color: c(gold);
+    }
+}
+
+%link-items-sidebar, .link-items-sidebar {
+    @extend %IBMPlexSans;
+    font-size: 14px;
+    color: c(orange);
+    line-height: 16px;
+}
+
+%link-items-footer,
+.link-items-footer {
+    @extend %IBMPlexSans;
+    font-size: 12px;
+    color: c(purple);
+    line-height: 16px;
+}
